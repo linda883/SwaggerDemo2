@@ -39,7 +39,6 @@ class TestClass:
         print('方法后')
 
     def test_one(self):
-        x = "this"
         assert not 4 > 5
 
     def test_two(self):

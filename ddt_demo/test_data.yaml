@@ -16,7 +16,7 @@
   payload:
   validate:
     {"status_code":200}
--test_get_add_pet:
+-test_post_add_pet:
   url: https://petstore.swagger.io/v2/pet
   method: POST
   hearder:
