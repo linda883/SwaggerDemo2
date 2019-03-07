@@ -2,10 +2,10 @@
     url: https://petstore.swagger.io/v2/pet/8
     method: POST
     hearder:
-      Content-Type: application/json
+      Content-Type: application/x-www-form-urlencoded
     payload:
-      name: duodo
-      status: normal
+      name: duod3o
+      status: nor3mal
     validate:
       {"status_code":200}
 -test_get_pet_by_id:
@@ -14,5 +14,31 @@
   hearder:
     Content-Type:
   payload:
+  validate:
+    {"status_code":200}
+-test_get_add_pet:
+  url: https://petstore.swagger.io/v2/pet
+  method: POST
+  hearder:
+    Content-Type: application/json
+  payload:
+    {
+      "id": 8,
+      "category": {
+        "id": 7,
+        "name": "whoami"
+      },
+      "name": "doggie",
+      "photoUrls": [
+        "http://www.baidu.com"
+      ],
+      "tags": [
+      {
+        "id": 0,
+        "name": "string"
+      }
+      ],
+      "status": "available"
+    }
   validate:
     {"status_code":200}

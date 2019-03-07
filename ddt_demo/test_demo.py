@@ -9,20 +9,20 @@ from ddt import ddt, data, unpack
 
 @ddt
 class TestDemo(unittest.TestCase):
-    @unittest.skip
+    # @unittest.skip
     @data('你好', '你', '我')
     def test_ddt_demo(self, value):
         print(value)
         self.assertEqual('你', value)
 
-    @unittest.skip
+    # @unittest.skip
     @data((1, 2), (2, 3))
     @unpack
     def test_ddt_demo_two(self, value1, value2):
         print(value1, value2)
         self.assertEqual(value1+1, value2)
 
-    @unittest.skip
+    # @unittest.skip
     @data([1, 2], [2, 3])
     @unpack
     def test_ddt_demo_three(self, value1, value2):

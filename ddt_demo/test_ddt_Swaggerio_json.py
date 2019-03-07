@@ -20,8 +20,6 @@ class TestSwaggerDdtFile(unittest.TestCase):
         self.id_a = result.json()['id']
         self.assertEqual(self.id_exp, self.id_a)
 
-    def test_deom(self):
-        print(self.id_a)
 
 if __name__ == '__main__':
     unittest.main()
